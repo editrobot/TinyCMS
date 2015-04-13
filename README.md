@@ -11,5 +11,3 @@ set DEBUG=editrobot_cpp & node .\bin\www
 
 ##License
 
-
-MIT: http://rem.mit-license.org
