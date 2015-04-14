@@ -1,7 +1,8 @@
 ﻿var time = require('./time.js');
 var Interface = function () { };
-global.ot_handle_id = -1;
+global.ot_handle_id = -1;		//初始化
 
+//数据防碰撞id
 Interface.prototype.ot_handle_id = function handle_id() {
     if (global.ot_handle_id > 999999) {
         global.ot_handle_id = 0;
@@ -9,6 +10,7 @@ Interface.prototype.ot_handle_id = function handle_id() {
     return ++global.ot_handle_id;
 };
 
+//文章模型表
 Interface.prototype.article = function (title, contents, author) {
     /*
      * 标题
@@ -45,7 +47,7 @@ Interface.prototype.article = function (title, contents, author) {
     };
 };
 
-//商品
+//商品模型表
 Interface.prototype.produce = function (title, contents, price, quantity, property_json, remark) {
     /*
      * 
@@ -88,6 +90,7 @@ Interface.prototype.produce = function (title, contents, price, quantity, proper
     };
 };
 
+//友情连接模型表
 Interface.prototype.friends_contacts = function (name, link, remark) {
     if (typeof name == "undefined") {
         var name = "empty";
@@ -100,6 +103,30 @@ Interface.prototype.friends_contacts = function (name, link, remark) {
         "name": name,
         "link" : link,
         "remark" : remark,
+        "handle": "" + time.timestamp() + this.ot_handle_id()
+    };
+};
+
+//资源管理表
+Interface.prototype.resource = function (name, tags, remark) {
+    if (typeof name == "undefined") {
+        var name = "empty";
+    }
+    if (typeof tags == "undefined") {
+        var tags = {
+			"tags1",
+			"tags2"
+		};
+    }
+    if (typeof remark == "undefined") {
+        var remark = "empty";
+    }
+
+    return {
+        "name": name,
+        "tags": tags,
+        "remark" : remark,
+        "create_time": time.timestamp(),
         "handle": "" + time.timestamp() + this.ot_handle_id()
     };
 };

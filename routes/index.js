@@ -80,6 +80,13 @@ router.all('/install', function(req, res, next){
 		ot.produce("produce_title_2", "produce contents", 0.0000, 100, {}, "remark")
     ];
 	file.file_write(global.project_root_path+"/"+ global.db_path+"/produce.json",JSON.stringify(json_fmt));
+	
+    //创建资源管理数据表
+	var json_fmt = [
+        {},
+		ot.resource("resource_name", {"tag1,tag2"}, "remark"),
+    ];
+	file.file_write(global.project_root_path+"/"+ global.db_path+"/resource.json",JSON.stringify(json_fmt));
 
 	res.render(
 		'test',

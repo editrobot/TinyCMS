@@ -13,6 +13,7 @@ connection.connect();
 module.exports = connection;
 
 /*
+//Example
 var mysql = require('./../modules/db.js');
 
 var mysql_console = mysql.query('select * from users', function(err, result){
