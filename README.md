@@ -4,10 +4,10 @@
 this is a cms。
 
 ##Install
-npm install editrobot
+download and unzip
 
 ##Run
-set DEBUG=editrobot_cpp & node .\bin\www
+set DEBUG=editrobot & node .\bin\www
 
 ##help
 QQ Group : 318648545
