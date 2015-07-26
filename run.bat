@@ -1,1 +1,1 @@
-set DEBUG=editrobot_cpp & node .\bin\www
+set DEBUG=editrobot & node .\bin\www

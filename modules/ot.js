@@ -113,10 +113,7 @@ Interface.prototype.resource = function (name, tags, remark) {
         var name = "empty";
     }
     if (typeof tags == "undefined") {
-        var tags = {
-			"tags1",
-			"tags2"
-		};
+        var tags = "tags";
     }
     if (typeof remark == "undefined") {
         var remark = "empty";

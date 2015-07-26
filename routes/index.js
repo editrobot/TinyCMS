@@ -5,6 +5,7 @@ var express_func = require('./../modules/express_func.js');
 var nosql = require('./../modules/nosql.js');
 var ot = require('./../modules/ot.js');
 var time = require('./../modules/time.js');
+var nodecpp = require("../build/Release/nodecpp");
 
 var express = require('express');
 var formidable = require("formidable");
@@ -84,12 +85,16 @@ router.all('/install', function(req, res, next){
     //创建资源管理数据表
 	var json_fmt = [
         {},
-		ot.resource("resource_name", {"tag1,tag2"}, "remark"),
+		ot.resource("resource_name", {}, "remark")
     ];
 	file.file_write(global.project_root_path+"/"+ global.db_path+"/resource.json",JSON.stringify(json_fmt));
-
+	
+	//////////////////////////////////////////////////////////////////
+	nodecpp.install();
+	//////////////////////////////////////////////////////////////////
+	
 	res.render(
-		'test',
+		'install',
 		{
 			title: __dirname
 		}
@@ -100,13 +105,13 @@ router.all('/install', function(req, res, next){
 router.all('/index', function(req, res, next){
 	
     // console.log(req.cookies.name);
-    //res.redirect("contacts_us.html");
-	res.render(
-		'index',
-		{
-			title: "/index"
-		}
-	);
+    res.redirect("contacts_us");
+	// res.render(
+		// 'index',
+		// {
+			// title: "/index"
+		// }
+	// );
 });
 
 //多媒体列表
@@ -149,6 +154,7 @@ router.all('/media', function (req, res, next){
                 return e.otname == "article" && e.handle == req.query.mediahandle;
             },
 		    function (err, result, key_index) {
+				console.log(result);
                 if (typeof result == "undefined") {
                     res.redirect("err.html?title=404&err_msg=404");
                 } else if (err) {
@@ -584,6 +590,13 @@ router.all('/del_friends_contacts', function (req, res, next) {
         );
         res.redirect("friends_contacts.html");//自动跳转到:edit_content.html
     });
+});
+
+//发送邮件
+router.all('/send_mail', function(req, res, next) {
+	res.render('send_mail', {
+		title: 'send_mail'
+	});
 });
 
 module.exports = router;
