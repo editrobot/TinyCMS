@@ -1,0 +1,38 @@
+body{
+	background-color: #634f6e;
+	color: #ebf2d0;
+	margin:0px;
+}
+
+b{
+	color: #c3a1d4;
+}
+
+table{
+	width:100%;
+	text-align:center;
+}
+
+#container{
+	width: 800px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top:25px;
+	text-align:left;
+}
+
+#container div{
+	margin-bottom:58px;
+}
+
+#head{
+	text-align: center;
+	margin-top: 18px;
+}
+
+#foot{
+	text-align: center;
+	height: 300px;
+	background-color: #222222;
+	padding-top: 13px;
+}

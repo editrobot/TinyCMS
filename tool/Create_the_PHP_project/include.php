@@ -1,0 +1,1 @@
+<?php require("class_module/_oop_zip_class.php");require("class_module/_oop_mysql_db_table_class.php");require("class_module/_oop_config_class.php");require("class_module/_oop_readme_class.php");require("class_module/_oop_module_class.php");require("class_module/_oop_get_data_class.php");require("class_module/_oop_page_class.php");require("class_module/_oop_del_file.php"); ?>

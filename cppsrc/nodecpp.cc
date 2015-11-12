@@ -1,13 +1,13 @@
 #define BUILDING_NODE_EXTENSION
 #include <node.h>
 #include <v8.h>
-#include "../../../cppmodule/123/server/StdAfx.h"
-#include "../../../cppmodule/123/server/Neurons.cpp"
-#include "../../../cppmodule/123/server/base_class.cpp"
-#include "../../../cppmodule/123/server/string_class.cpp"
-#include "../../../cppmodule/123/server/string_expand_class.cpp"
-#include "../../../cppmodule/123/server/html_class.cpp"
-#include "../../../cppmodule/123/server/file_class.cpp"
+#include "../../../module_code/module_code/StdAfx.h"
+#include "../../../module_code/module_code/Neurons.cpp"
+#include "../../../module_code/module_code/base_class.cpp"
+#include "../../../module_code/module_code/string_class.cpp"
+#include "../../../module_code/module_code/string_expand_class.cpp"
+#include "../../../module_code/module_code/html_class.cpp"
+#include "../../../module_code/module_code/file_class.cpp"
 
 using namespace v8;
 using namespace std;

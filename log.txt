@@ -1,13 +1,4 @@
-在此解决方案中一次生成一个项目。若要启用并行生成，请添加“/m”开关。
-     正在创建库 D:\data\temp\nodejs_npm\project\editrobot\build\Release\callback.lib 和对象 D:\data\temp\nodejs_npm\project\editrobot\build\Release\callback.exp
-  正在生成代码
-  已完成代码的生成
-  callback.vcxproj -> D:\data\temp\nodejs_npm\project\editrobot\build\Release\\callback.node
-     正在创建库 D:\data\temp\nodejs_npm\project\editrobot\build\Release\gps.lib 和对象 D:\data\temp\nodejs_npm\project\editrobot\build\Release\gps.exp
-  正在生成代码
-  已完成代码的生成
-  gps.vcxproj -> D:\data\temp\nodejs_npm\project\editrobot\build\Release\\gps.node
-     正在创建库 D:\data\temp\nodejs_npm\project\editrobot\build\Release\nodecpp.lib 和对象 D:\data\temp\nodejs_npm\project\editrobot\build\Release\nodecpp.exp
-  正在生成代码
-  已完成代码的生成
-  nodecpp.vcxproj -> D:\data\temp\nodejs_npm\project\editrobot\build\Release\\nodecpp.node
+make: Entering directory '/media/ubuntu/54D4EAD8D4EABAFE/version/code/nodejs_npm/project/editrobot/build'
+  CXX(target) Release/obj.target/gps/cppsrc/gps.o
+gps.target.mk:82: recipe for target 'Release/obj.target/gps/cppsrc/gps.o' failed
+make: Leaving directory '/media/ubuntu/54D4EAD8D4EABAFE/version/code/nodejs_npm/project/editrobot/build'

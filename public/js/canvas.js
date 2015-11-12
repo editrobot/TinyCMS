@@ -6,10 +6,10 @@ append.define("canvas", [], function() {
 			canvas_oop._initialized = true;
 		}
 		// globals
-  var modelViewMatrix, rotationAxis, projectionMatrix;
-  var shaderProg, shaderVertexPositionAttribute, shaderVertexColorAttribute, 
-      shaderProjectionMatrixUniform, shaderModelViewMatrixUniform;
-  var vertBuffer, colorBuffer;
+	var modelViewMatrix, rotationAxis, projectionMatrix;
+	var shaderProg, shaderVertexPositionAttribute, shaderVertexColorAttribute, 
+		shaderProjectionMatrixUniform, shaderModelViewMatrixUniform;
+	var vertBuffer, colorBuffer;
 
 
 		var onerev = 10000; // ms
